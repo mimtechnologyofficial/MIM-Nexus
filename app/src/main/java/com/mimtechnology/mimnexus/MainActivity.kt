@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.graphics.Color
 import android.graphics.Typeface
 import android.view.Gravity
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import android.widget.Toast
 
 class MainActivity : Activity() {
 
@@ -57,6 +59,14 @@ class MainActivity : Activity() {
             setTextColor(Color.WHITE)
             setBackgroundColor(Color.rgb(35, 35, 35))
             setPadding(30, 35, 30, 35)
+
+            setOnClickListener {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Menu Projek MIM Nexus",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
 
         val tools = TextView(this).apply {
@@ -65,12 +75,18 @@ class MainActivity : Activity() {
             setTextColor(Color.WHITE)
             setBackgroundColor(Color.rgb(35, 35, 35))
             setPadding(30, 35, 30, 35)
+
+            setOnClickListener {
+                Toast.makeText(
+                    this@MainActivity,
+                    "Menu Tools MIM Nexus",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
         }
 
         root.addView(header)
-
         root.addView(welcome)
-
         root.addView(subtitle)
 
         root.addView(
